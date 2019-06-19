@@ -31,13 +31,13 @@ window:
 
   # Window decorations
   # Setting this to false will result in window without borders and title bar.
-  decorations: true
+  decorations: false 
 
 # Display tabs using this many cells (changes require restart)
-tabspaces: 8
+tabspaces: 2
 
 # When true, bold text is drawn using the bright variant of colors.
-draw_bold_text_with_bright_colors: true
+draw_bold_text_with_bright_colors: false 
 
 # Font configuration (changes require restart)
 #
@@ -62,13 +62,14 @@ font:
   # The normal (roman) font face to use.
   normal:
     family: monospace  # should be "Menlo" or something on macOS.
-    # Style can be specified to pick a specific face.
+    
+      # Style can be specified to pick a specific face.
     # style: Regular
 
   # The bold font face
   bold:
     family: monospace # should be "Menlo" or something on macOS.
-    # Style can be specified to pick a specific face.
+    #family: devicon  # Style can be specified to pick a specific face.
     # style: Bold
 
   # The italic font face
@@ -78,7 +79,7 @@ font:
     # style: Italic
 
   # Point size of the font
-  size: 9.0
+  size: 10.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -102,7 +103,7 @@ font:
   # OS X only: use thin stroke font rendering. Thin strokes are suitable
   # for retina displays, but for non-retina you probably want this set to
   # false.
-  use_thin_strokes: true
+  use_thin_strokes: false
 
 # Should display the render timer
 render_timer: false
@@ -114,34 +115,42 @@ custom_cursor_colors: true
 colors:
   # Default colors
   primary:
-    background: '0x515151'
-    foreground: '0xc5c8c6'
+    background: '0x1b2a42'
+    foreground: '0xaedefc'
 
   # Normal colors
   normal:
-    black:   '0xfdf3ff'
-    red:     '0x8851DB'
-    # Things affected by green: tmux; statusbar
-    green:   '0x588362'
+    # Actual color: White Things affected by `black`: unknown.
+    black:   '0xffffff'
+    # Actual color: Dark Yellow/orangeish. 
+    # Things affected by `red`: git statusbar state; version
+    red:     '0xffb200'
+    # Actual color: Paste green
+    # Things affected by green: tmux background; statusbar; valid command
+    # Strings in results.
+    green:   '0x6fc483'
+    # Actual color: Paste yellow
     # Things affected by yellow: ale; warning
     yellow:  '0xDBFE8E'
+    # Actual color: whiteish
     # Things affected by blue: ale; error selection
-    blue:    '0xfc8d8d'
+    blue:    '0xfefefe'
     # Things affected by magenta: unknown. 
-    magenta: '0x686868'
+    magenta: '0xf2ce87'
     # Things affected by cyan: unknown. 
-    cyan:    '0xff3000'
+    cyan:    '0x7dc8d1'
     # Things affected by white: unknown. 
     white:   '0x00FFD2'
+
 
 
   # Bright colors
   bright:
     # Things affected by black: unknown. 
-    black:   '0x000000'
+    black:   '0xffffff'
     # Things affected by red: alacritty; unkown commands on system.
     # `throw` and `Error` keywords git status and version 
-    red:     '0xFF8E8E'
+    red:     '0x550384'
     # Things affected by green: node version and some GO keywords. 
     green:   '0x00C5A5'
     # Things affected by yellow: line numbers and lang keywords. 
@@ -149,7 +158,7 @@ colors:
     # Things affected by blue: stuff from vim. 
     blue:    '0x52E08f'
     # Things affected by magenta: strings. 
-    magenta: '0xfc8d8d'
+    magenta: '0xffb200'
     # Things affected by cyan: Comments, YML. 
     cyan:    '0x7DC8D1'
     # Things affected by white: unknown. 
@@ -246,10 +255,10 @@ hide_cursor_when_typing: false
 # - Block
 # - Underline
 # - Beam
-cursor_style: Block
+cursor_style: Underline
 
 # Whether the cursor should be a hollow block on window focus loss
-unfocused_hollow_cursor: true
+unfocused_hollow_cursor: false
 
 # Live config reload (changes require restart)
 live_config_reload: true

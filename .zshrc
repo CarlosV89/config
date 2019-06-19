@@ -138,7 +138,7 @@ eval "$(direnv hook zsh)"
 
 export GOPATH=$HOME/code/go
 export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOPATH:$GOBIN
+export PATH=$PATH:$GOBIN
 
 source $ZSH/oh-my-zsh.sh
 
@@ -166,3 +166,7 @@ source /home/vanor/.local/bin/virtualenvwrapper.sh
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /home/vanor/.nvm/versions/node/v10.8.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/vanor/.nvm/versions/node/v10.8.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
 [ -s "/home/vanor/.jabba/jabba.sh" ] && source "/home/vanor/.jabba/jabba.sh"
+
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /home/vanor/.nvm/versions/node/v8.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /home/vanor/.nvm/versions/node/v8.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
