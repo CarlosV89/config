@@ -19,19 +19,19 @@ window:
   # Falls back to size specified by window manager if set to 0x0.
   # (changes require restart)
   dimensions:
-    columns: 80
-    lines: 24
+    columns: 0
+    lines: 0
 
   # Adds this many blank pixels of padding around the window
   # Units are physical pixels; this is not DPI aware.
   # (change requires restart)
   padding:
-    x: 2
-    y: 2
+    x: 0
+    y: 0
 
   # Window decorations
   # Setting this to false will result in window without borders and title bar.
-  decorations: false 
+  decorations: none 
 
 # Display tabs using this many cells (changes require restart)
 tabspaces: 2
@@ -61,22 +61,22 @@ draw_bold_text_with_bright_colors: false
 font:
   # The normal (roman) font face to use.
   normal:
-    family: monospace  # should be "Menlo" or something on macOS.
+    family: Fira Code  # should be "Menlo" or something on macOS.
     
       # Style can be specified to pick a specific face.
-    # style: Regular
+    style: Regular
 
   # The bold font face
   bold:
-    family: monospace # should be "Menlo" or something on macOS.
+    family: Fira Code # should be "Menlo" or something on macOS.
     #family: devicon  # Style can be specified to pick a specific face.
-    # style: Bold
+    style: Bold
 
   # The italic font face
   italic:
-    family: monospace # should be "Menlo" or something on macOS.
+    family: Menlo # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
-    # style: Italic
+    style: Italic
 
   # Point size of the font
   size: 10.0
@@ -104,9 +104,6 @@ font:
   # for retina displays, but for non-retina you probably want this set to
   # false.
   use_thin_strokes: false
-
-# Should display the render timer
-render_timer: false
 
 # Use custom cursor colors. If true, display the cursor in the cursor.foreground
 # and cursor.background colors, otherwise invert the colors of the cursor.
@@ -200,7 +197,7 @@ colors:
 #
 visual_bell:
   animation: EaseOutExpo
-  duration: 0
+  duration: 1 
 
 # Background opacity
 background_opacity: 1.0
@@ -250,15 +247,14 @@ dynamic_title: true
 hide_cursor_when_typing: false
 
 # Style of the cursor
-#
-# Values for 'cursor_style':
-# - Block
-# - Underline
-# - Beam
-cursor_style: Underline
-
-# Whether the cursor should be a hollow block on window focus loss
-unfocused_hollow_cursor: false
+cursor:
+  # Values for 'cursor_style':
+  # - Block
+  # - Underline
+  # - Beam
+  style: Underline
+  # Whether the cursor should be a hollow block on window focus loss
+  unfocused_hollow: false
 
 # Live config reload (changes require restart)
 live_config_reload: true
