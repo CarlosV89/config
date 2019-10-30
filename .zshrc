@@ -83,7 +83,7 @@ plugins=(
   git
   zsh-completions
   zsh-syntax-highlighting
-
+  zsh-autosuggestions
 )
 
 export NVM_DIR="$HOME/.nvm"
@@ -119,7 +119,8 @@ export NVM_DIR="$HOME/.nvm"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
+eval `ssh-agent`
+ssh-add
 
 
 fpath=($fpath "/home/vanor/.zfunctions")
@@ -170,3 +171,4 @@ source /home/vanor/.local/bin/virtualenvwrapper.sh
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /home/vanor/.nvm/versions/node/v8.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /home/vanor/.nvm/versions/node/v8.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

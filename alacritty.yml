@@ -12,7 +12,7 @@ env:
   # Note that some xterm terminfo databases don't declare support for italics.
   # You can verify this by checking for the presence of `smso` and `sitm` in
   # `infocmp xterm-256color`.
-  TERM: xterm-256color
+  TERM: xterm-256color 
 
 window:
   # Window dimensions in character columns and lines
@@ -61,14 +61,14 @@ draw_bold_text_with_bright_colors: false
 font:
   # The normal (roman) font face to use.
   normal:
-    family: Fira Code  # should be "Menlo" or something on macOS.
+    family: Roboto Mono For Powerline  # should be "Menlo" or something on macOS.
     
       # Style can be specified to pick a specific face.
     style: Regular
 
   # The bold font face
   bold:
-    family: Fira Code # should be "Menlo" or something on macOS.
+    family: Ubuntu Mono # should be "Menlo" or something on macOS.
     #family: devicon  # Style can be specified to pick a specific face.
     style: Bold
 
@@ -109,68 +109,34 @@ font:
 # and cursor.background colors, otherwise invert the colors of the cursor.
 custom_cursor_colors: true
 
+# Colors (Ayu Dark)
 colors:
   # Default colors
   primary:
-    background: '0x1b2a42'
-    foreground: '0xaedefc'
+    background: '0x0A0E14'
+    foreground: '0xB3B1AD'
 
   # Normal colors
   normal:
-    # Actual color: White Things affected by `black`: unknown.
-    black:   '0xffffff'
-    # Actual color: Dark Yellow/orangeish. 
-    # Things affected by `red`: git statusbar state; version
-    red:     '0xffb200'
-    # Actual color: Paste green
-    # Things affected by green: tmux background; statusbar; valid command
-    # Strings in results.
-    green:   '0x6fc483'
-    # Actual color: Paste yellow
-    # Things affected by yellow: ale; warning
-    yellow:  '0xDBFE8E'
-    # Actual color: whiteish
-    # Things affected by blue: ale; error selection
-    blue:    '0xfefefe'
-    # Things affected by magenta: unknown. 
-    magenta: '0xf2ce87'
-    # Things affected by cyan: unknown. 
-    cyan:    '0x7dc8d1'
-    # Things affected by white: unknown. 
-    white:   '0x00FFD2'
-
-
+    black: '0x01060E'
+    red: '0xEA6C73'
+    green: '0x91B362'
+    yellow: '0xF9AF4F'
+    blue: '0x53BDFA'
+    magenta: '0xFAE994'
+    cyan: '0x90E1C6'
+    white: '0xC7C7C7'
 
   # Bright colors
   bright:
-    # Things affected by black: unknown. 
-    black:   '0xffffff'
-    # Things affected by red: alacritty; unkown commands on system.
-    # `throw` and `Error` keywords git status and version 
-    red:     '0x550384'
-    # Things affected by green: node version and some GO keywords. 
-    green:   '0x00C5A5'
-    # Things affected by yellow: line numbers and lang keywords. 
-    yellow:  '0x00C5A5'
-    # Things affected by blue: stuff from vim. 
-    blue:    '0x52E08f'
-    # Things affected by magenta: strings. 
-    magenta: '0xffb200'
-    # Things affected by cyan: Comments, YML. 
-    cyan:    '0x7DC8D1'
-    # Things affected by white: unknown. 
-    white:   '0x47FF90'
-
-  # Dim colors (Optional)
-  dim:
-    black:   '0x1d2021'
-    red:     '0x421e1e'
-    green:   '0x232b0f'
-    yellow:  '0x4d3b27'
-    blue:    '0x2b3c44'
-    magenta: '0x4e3d45'
-    cyan:    '0x205161'
-    white:   '0xf4e8ba'
+    black: '0x686868'
+    red: '0xF07178'
+    green: '0xC2D94C'
+    yellow: '0xFFB454'
+    blue: '0x59C2FF'
+    magenta: '0xFFEE99'
+    cyan: '0x95E6CB'
+    white: '0xFFFFFF'
 
 
 # Visual Bell
@@ -252,7 +218,7 @@ cursor:
   # - Block
   # - Underline
   # - Beam
-  style: Underline
+  style: Block 
   # Whether the cursor should be a hollow block on window focus loss
   unfocused_hollow: false
 
